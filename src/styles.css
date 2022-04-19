@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+.game--container{
+  background: rgba(255, 255, 255, 0.803);
+  margin: 5%;
+}
+
+.question--container{
+  display: flex;
+  flex-direction: column;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+li{
+  width: 100px;
+  background: transparent;
+  border: 1px solid navy;
+  color: navy;
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.question--title{
+  color: navy;
+}
+
+li:hover, .active{
+  background: rgb(215, 217, 246);
+}
+
+
+hr{
+  width: 80%;
+}
+
+button{
+  background: rgb(64, 67, 128);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 15px;
+  margin-bottom: 5%;
+}
+
+.correct{
+  background: green;
+}
+
+.incorrect{
+  background: red;
+}
