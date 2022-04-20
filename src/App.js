@@ -16,13 +16,22 @@ function App() {
             id: nanoid(),
             correctAnswer: dataUnit.correct_answer,
             questionTitle: dataUnit.question,
-            choices: [dataUnit.correct_answer, ...dataUnit.incorrect_answers],
+            choices: {
+              correct: {
+                value: dataUnit.correct_answer,
+                id: nanoid(5),
+              },
+              incorrect: {
+                ...dataUnit.incorrect_answers.map((incorrect) => ({
+                  id: nanoid(5),
+                  value: incorrect,
+                })),
+              },
+            },
           }))
         );
       });
   }, []);
-
-  console.log(data);
 
   const questionsItems = data.map((dataUnit) => {
     return (
