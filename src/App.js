@@ -20,11 +20,13 @@ function App() {
               correct: {
                 value: dataUnit.correct_answer,
                 id: nanoid(5),
+                isHeld: false,
               },
               incorrect: {
                 ...dataUnit.incorrect_answers.map((incorrect) => ({
                   id: nanoid(5),
                   value: incorrect,
+                  isHeld: false,
                 })),
               },
             },
